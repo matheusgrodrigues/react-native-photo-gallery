@@ -1,6 +1,6 @@
 # Photo Gallery
 
-Aplicativo simples para demonstrar a busca e renderização de uma lista de imagens utilizando `React Native`;
+Aplicativo simples que consome a api do Picsum Photos, e exibe as fotos em grid.
 
 -  [Picsum Photos](https://picsum.photos/)
 -  FlatList
