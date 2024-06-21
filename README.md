@@ -7,3 +7,9 @@ Aplicativo simples para demonstrar a busca e renderização de uma lista de imag
 -  Image
 -  Fetch API
 -  TypeScript
+
+## Demo
+
+![Photo Gallery]([relative/path/in/repository/to/image.svg](https://raw.githubusercontent.com/matheusgrodrigues/react-native-photo-galley/main/assets/images/demo.png))
+
+
