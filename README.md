@@ -1,50 +1,17 @@
-# Welcome to your Expo app 👋
+# Photo Gallery
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicativo simples para demonstrar a busca e renderização de uma lista de imagens utilizando `React Native`;
 
-## Get started
+-  [Picsum Photos](https://picsum.photos/)
+-  FlatList
+-  Image
+-  Fetch API
+-  TypeScript
 
-1. Install dependencies
+## TODO - Possíveis melhorias
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+-  Use a `PixelRatioAPI` para detectar a densidade de pixels do dispositivo (por exemplo 3,) e buscar imagens de resolução mais alta, se necessário. Devemos também garantir que nossos Imagearquivos estejam alinhados com os pixels, caso contrário as bordas podem parecer borradas ou ter pequenas linhas entre elas.
+-  Persista a lista buscada de imagens nas inicializações de aplicativos com AsyncStorage .
+-  Use `react-navigation` para adicionar uma tela de "detalhes" que aparece ao tocar em uma foto - a listAPI que estamos usando já retorna alguns metadados de fotos que você pode exibir.
+-  Lide com erros com mais elegância. Tente novamente as solicitações com falha algumas vezes e também mostre um componente de erro separado se a primeira página de fotos for carregada, mas a subsequente falhar.
+-  Considere uma abordagem mais sofisticada para busca de dados para evitar interações um tanto complexas entre useEffecte useCallback. Isso só ficará mais complexo à medida que nosso aplicativo crescer. Idealmente, poderíamos agrupar nossas chamadas de API com o recurso Suspense do React , por exemplo, usando https://resthooks.io/ .
